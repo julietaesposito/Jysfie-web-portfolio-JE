@@ -31,6 +31,7 @@ body {
     text-align: center;
     margin-top: 100px;
     margin-bottom: 50px;
+    text-shadow: 3px 3px 0 #32303e;
 }
 
 /* Header */
@@ -49,6 +50,12 @@ body {
     font-size: 16px;
     color: #c2b6a7;
     text-decoration: none;
+    transition: text-shadow 0.3s ease;
+}
+
+.nav a:hover {
+    text-shadow: 0.5px 0px 0 currentColor;
+    text-decoration: underline;
 }
 
 .logo {
@@ -63,6 +70,14 @@ body {
 
 
 /* Sección hero */
+
+.hero {
+    background-image: url('../img/background.png');
+    background-size: cover; 
+    background-position: center;
+    padding-top: 20px;
+    padding-bottom: 70px;
+}
 
 .hero-grid {
     display: grid;
@@ -118,22 +133,25 @@ body {
 
 /* Sección portfolio preview */
 
+.gallery-container {
+    overflow: hidden;
+}
+
+
 .preview-gallery {
+    width: max-content;
     display: flex;
     justify-content: center;
     gap: 24px;
+    padding: 15px 0;
 }
 
 .preview-gallery img {
-    width: 282px;
+    width: 220px;
     object-fit: cover;
-    transition: transform 0.3s ease;
     border-radius: 10px;
     box-shadow: 0 5px 10px rgba(0,0,0,0.3);
-}
-
-.preview-gallery img:hover {
-    transform: translateY(-8px);
+    animation: carrusel 20s linear infinite;
 }
 
 .port-prev-btn {
@@ -160,6 +178,13 @@ body {
 }
 
 /* Sección de comisiones */
+
+.commissions-preview {
+    background-image: url('../img/background02.png');
+    background-size: cover; 
+    background-position: center;
+    padding-bottom: 70px;
+}
 
 .cards-container {
     display: grid;
@@ -195,6 +220,7 @@ h3 {
     gap: 16px;
     flex-grow: 1;
 }
+
 
 .card-content .btn{
     margin-top: auto;
@@ -260,6 +286,12 @@ h3 {
     text-decoration: none;
     color: #c2b6a7;
     transition: 0.3s;
+    transition: text-shadow 0.3s ease;
+}
+
+.footer-box a:hover {
+    text-shadow: 0.5px 0px 0 currentColor;
+    text-decoration: underline;
 }
 
 .social-links {
@@ -277,4 +309,32 @@ h3 {
     justify-content: center;
     padding: 30px;
     border-top: 1px solid #c2b6a7;
+}
+
+
+/* Animación */
+@keyframes carrusel {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-1220px);
+    }
+}
+
+/* --- Responsive: Tablets y Celulares --- */
+@media (max-width: 768px) {
+    .hero-text {
+        grid-column: span 12;
+        text-align: center;
+    }
+
+    .hero-img {
+        grid-column: span 12;
+        justify-content: center;
+    }
+
+    .card {
+        grid-column: span 12;
+    }
 }

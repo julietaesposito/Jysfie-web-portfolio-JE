@@ -1,6 +1,6 @@
 # 🎨 Jysfie Art - Portfolio Web
 
-Este proyecto es una Landing Page responsiva diseñada y desarrollada para mostrar un portafolio de ilustración digital, detalles de comisiones y un formulario de contacto. 
+Este proyecto es una Landing Page responsiva diseñada y desarrollada para mostrar un portafolio de ilustración digital, que además incluye una simulación interactiva de una tienda de comisiones con carrito de compras y un formulario de contacto. 
 
 Proyecto desarrollado como parte de la formación en el curso de Front End JS en Talento Tech.
 
@@ -10,11 +10,16 @@ Proyecto desarrollado como parte de la formación en el curso de Front End JS en
 * **CSS Grid & Flexbox:** Estructuración moderna del layout para alineación precisa de elementos y tarjetas de contenido.
 * **Animaciones CSS Nativas:** Implementación de un carrusel de imágenes infinito (marquee) y transiciones suaves de interfaz (hover states) usando `@keyframes` puro, sin dependencias externas.
 * **UI/UX:** Aplicación de principios de diseño visual, jerarquía, legibilidad y consistencia de marca (Color blocking, text-shadows y fondos texturizados).
+* **Simulación de E-Commerce:** Carrito de compras dinámico construido con JavaScript puro. Renderizado dinámico del DOM para mostrar los productos disponibles. Funcionalidad para agregar, eliminar y vaciar el carrito con cálculo de totales en tiempo real.
+* **Persistencia de Datos:** Integración con `localStorage` para que el carrito mantenga su estado incluso si el usuario recarga la página. Flujo de "Checkout" simulado utilizando alertas modales (SweetAlert2).
+
 
 ## Tecnologías Utilizadas
 
 * **HTML5:** Estructura semántica.
 * **CSS3:** Estilos, variables, animaciones y Media Queries.
+* **JavaScript:** Manipulación del DOM, eventos y persistencia de datos.
+* **Librerías:** SweetAlert2 (Para alertas de UI en la simulación de pago).
 * **Git & GitHub:** Control de versiones y despliegue del repositorio.
 
 ## Estructura del Proyecto
@@ -22,6 +27,7 @@ Proyecto desarrollado como parte de la formación en el curso de Front End JS en
 El repositorio está organizado de la siguiente manera:
 - `/index.html`: Estructura principal de la página.
 - `/css/styles.css`: Hoja de estilos con la lógica visual y responsiva.
+- `/js/cart.js`: Lógica de interactividad y simulación del carrito de compras.
 - `/img/`: Directorio que contiene los recursos gráficos (Ver aviso legal).
 
 ## ⚠️ Aviso Legal sobre el Arte e Ilustraciones (Copyright Disclaimer)

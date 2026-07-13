@@ -3,12 +3,12 @@
 // Lista de productos
 
 let products = [
-    { name: "Full Body Character", price: 35},
-    { name: "Half Body Character", price: 25},
-    { name: "Chibi Character", price: 20},
-    { name: "Valorant Stickers Pack 1", price: 15},
-    { name: "Valorant Stickers Pack 2", price: 15},
-    { name: "Valorant Stickers Pack 3", price: 15}
+    {name: "Full Body Character", price: 35, img: "img/full-body-char.jpg"},
+    {name: "Half Body Character", price: 25, img: "img/half-body-char.jpg"},
+    {name: "Chibi Character", price: 20, img: "img/chibi-char.jpeg"},
+    {name: "Valorant Stickers Pack 1", price: 15, img: "img/vlr-pack-1.jpeg"},
+    {name: "Valorant Stickers Pack 2", price: 15, img: "img/vlr-pack-2.jpeg"},
+    {name: "Valorant Stickers Pack 3", price: 15, img: "img/vlr-pack-3.jpeg"}
 ];
 
 
@@ -28,7 +28,7 @@ function loadCart() {
 
     if (saved) {
         // JSON.parse convierte el texto de vuelta a un array de objetos.
-        carrito = JSON.parse(saved);
+        cart = JSON.parse(saved);
     }
 }
 
@@ -73,6 +73,7 @@ function viewProducts() {
         item.className = "product-item";
 
         item.innerHTML =
+            "<img class='product-img' src='" + product.img + "' alt='" + product.name + "'>" +
             "<span class='product-name'>" + product.name + "</span>" +
             "<span class='product-price'>$" + product.price + "</span>" +
             "<button class='btn-add' data-index='" + i + "'>Add</button>";
@@ -94,7 +95,7 @@ function viewProducts() {
 // Saca un producto del carrito según su posición.
 function removeProduct(index) {
     let product = cart[index];
-    cart.splice(index, 1);o
+    cart.splice(index, 1);
     console.log(product.name + " removed from cart");
 
     updateCart();
@@ -151,7 +152,7 @@ function updateCart() {
     saveCart();
 
     // También lo mostramos en la consola, como en el ejemplo de clase.
-    showCart();
+    viewCart();
 }
 
 

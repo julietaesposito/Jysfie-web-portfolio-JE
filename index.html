@@ -89,13 +89,13 @@
         </div>
     </section>
 
-    <!-- Sección de comisiones -->
+    <!-- Sección de comisiones 
     <section class="commissions-preview" id="commissions-preview">
         <h2 class="section-title">commissions</h2>
 
         <div class="cards-container container" >
         
-            <!-- Tarjeta 1: Full Body -->
+            <!-- Tarjeta 1: Full Body
             <div class="card">
                 <img src="img/49fc19aa_original.jpg" alt="Full body character">
                 <div class="card-content">
@@ -111,7 +111,7 @@
                 </div>
             </div>
             
-            <!-- Tarjeta 2: Half Body -->
+            <!-- Tarjeta 2: Half Body
             <div class="card">
                 <img src="img/5e01fe1a_original.jpg" alt="Half body character">
                 <div class="card-content">
@@ -127,6 +127,44 @@
         </div>
 
     </section>
+    -->
+
+    <!-- Sección de productos y carrito de compras -->
+    <section class="cart-section" id="cart-section">
+        <h2 class="section-title">commissions</h2>
+
+        <div class="cart-container container">
+            <!-- Lista de productos disponibles -->
+            <div class="products-panel">
+                <!-- <h3>Productos disponibles</h3> -->
+                <ul id="products-list" class="products-list">
+                    <!-- Los productos se cargan desde JavaScript -->
+                </ul>
+            </div>
+
+        <!-- Carrito -->
+        <aside class="cart-panel">
+            <h3>🛒 Your cart (<span id="cart-amount">0</span>)</h3>
+            <ul id="cart-items" class="cart-items">
+                <!-- Los items del carrito se cargan desde JavaScript -->
+            </ul>
+
+            <div class="cart-total">
+                <span>Total:</span>
+                <strong id="cart-total">$0</strong>
+            </div>
+
+            <div class="cart-actions">
+                <button id="btn-empty" class="btn">Empty</button>
+                <button id="btn-pay" class="btn">Pay</button>
+            </div>
+        </aside>
+
+    </div>
+</section>
+
+
+
 
     <!-- Sección de contacto -->
     <section class="contact" id="contact">
@@ -195,6 +233,9 @@
     </div>
 
 </footer>
+
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<script src="js/cart.js"></script>
 
 </body>
 </html>
